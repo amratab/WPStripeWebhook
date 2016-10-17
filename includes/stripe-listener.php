@@ -2,7 +2,7 @@
     
     function pippin_stripe_event_listener() {
         
-        if(isset($_GET['wps-listener']) && $_GET['wps-listener'] == 'abcdef') {
+        if(isset($_GET['webhook-listener']) && $_GET['webhook-listener'] == 'stripe') {
             global $stripe_options;
             
             require_once(STRIPE_BASE_DIR . '/lib/Stripe.php');
