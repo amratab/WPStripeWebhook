@@ -25,15 +25,18 @@ function pippin_stripe_event_listener() {
 		if(isset($event_json->id)) {
 			try {
                 
-				$event = Stripe_Event::retrieve($event_id);
-				$invoice = $event->data->object;
+                
+//				$event = Stripe_Event::retrieve($event_id);
+//				$invoice = $event->data->object;
 				// failed payment
-				if($event->type == 'invoice.payment_failed') {
-                    
-                    $stripe_customer = Stripe_Customer::retrieve($invoice->customer);
-                    $name = $stripe_customer->name;
-                    $email = $stripe_customer->email;
-                    $subject = __('Failed Payment', 'pippin_stripe');
+//				if($event->type == 'invoice.payment_failed') {
+                
+//                    $stripe_customer = Stripe_Customer::retrieve($invoice->customer);
+//                    $name = $stripe_customer->name;
+//                     $email = $stripe_customer->email;
+                    $name = "Amrata Baghel";
+                    $email = "amrata.baghel@gmail.com";
+                    $subject = __('Testing Failed Payment', 'pippin_stripe');
                     $headers = array('Content-Type: text/html; charset=UTF-8', 'From: The Board Club <peter@newportboardclub.com>', 'Bcc: sahil1345@gmail.com');
                     $message = "<html>";
                     $message = "<div>Hello " . $name . ".</div><br>";
@@ -46,7 +49,7 @@ function pippin_stripe_event_listener() {
                     $message .= "<p><font color=\"#888888\">The Board Club</font></p></div></html>";
                     wp_mail($email, $subject, $message, $headers);
                     
-				}
+//				}
 				
 				
 			} catch (Exception $e) {
