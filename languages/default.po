@@ -1,0 +1,92 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WordPress Stripe Integration Demo\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-03-06 18:13-0600\n"
+"PO-Revision-Date: 2012-03-06 18:13-0600\n"
+"Last-Translator: Pippin Williamson <pippin@pippinsplugins.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
+"X-Poedit-SearchPath-1: ../includes\n"
+
+#: ../includes/settings.php:12
+msgid "Stripe Settings"
+msgstr ""
+
+#: ../includes/settings.php:21
+msgid "Test Mode"
+msgstr ""
+
+#: ../includes/settings.php:25
+msgid "Check this to use the plugin in test mode."
+msgstr ""
+
+#: ../includes/settings.php:31
+msgid "API Keys"
+msgstr ""
+
+#: ../includes/settings.php:36
+msgid "Live Secret"
+msgstr ""
+
+#: ../includes/settings.php:40
+msgid "Paste your live secret key."
+msgstr ""
+
+#: ../includes/settings.php:45
+msgid "Live Publishable"
+msgstr ""
+
+#: ../includes/settings.php:49
+msgid "Paste your live publishable key."
+msgstr ""
+
+#: ../includes/settings.php:54
+msgid "Test Secret"
+msgstr ""
+
+#: ../includes/settings.php:58
+msgid "Paste your test secret key."
+msgstr ""
+
+#: ../includes/settings.php:63
+msgid "Test Publishable"
+msgstr ""
+
+#: ../includes/settings.php:67
+msgid "Paste your test publishable key."
+msgstr ""
+
+#: ../includes/settings.php:74
+msgid "Save Options"
+msgstr ""
+
+#: ../includes/shortcodes.php:5
+msgid "Thank you for your payment."
+msgstr ""
+
+#: ../includes/shortcodes.php:7
+msgid "Submit a payment of $10"
+msgstr ""
+
+#: ../includes/shortcodes.php:10
+msgid "Card Number"
+msgstr ""
+
+#: ../includes/shortcodes.php:14
+msgid "CVC"
+msgstr ""
+
+#: ../includes/shortcodes.php:18
+msgid "Expiration (MM/YYYY)"
+msgstr ""
+
+#: ../includes/shortcodes.php:26
+msgid "Submit Payment"
+msgstr ""
+
