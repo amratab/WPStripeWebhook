@@ -1,7 +1,7 @@
 <?php
 
 function pippin_stripe_settings_setup() {
-	add_options_page('Stripe Settings', 'Stripe Settings', 'manage_options', 'stripe-settings', 'pippin_stripe_render_options_page');
+	add_options_page('Stripe Webhook Settings', 'Stripe Webhook Settings', 'manage_options', 'stripe-settings', 'pippin_stripe_render_options_page');
 }
 add_action('admin_menu', 'pippin_stripe_settings_setup');
 
@@ -9,7 +9,7 @@ function pippin_stripe_render_options_page() {
 	global $stripe_options;
 	?>
 	<div class="wrap">
-		<h2><?php _e('Stripe Settings', 'pippin_stripe'); ?></h2>
+		<h2><?php _e('Stripe Webhook Settings', 'pippin_stripe'); ?></h2>
 		<form method="post" action="options.php">
 		
 			<?php settings_fields('stripe_settings_group'); ?>
