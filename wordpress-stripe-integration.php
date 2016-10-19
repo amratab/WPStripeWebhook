@@ -26,7 +26,7 @@ $stripe_options = get_option('stripe_settings');
 * plugin text domain for translations
 *******************************************/
 
-load_plugin_textdomain( 'pippin_stripe', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+load_plugin_textdomain( 'ab_stripe', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 
 /**********************************
 * includes

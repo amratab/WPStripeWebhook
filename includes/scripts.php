@@ -1,6 +1,6 @@
 <?php
 
-function pippin_load_stripe_scripts() {
+function ab_load_stripe_scripts() {
 
 	global $stripe_options;
 	
@@ -12,4 +12,4 @@ function pippin_load_stripe_scripts() {
 	}
 
 }
-add_action('wp_enqueue_scripts', 'pippin_load_stripe_scripts');
+add_action('wp_enqueue_scripts', 'ab_load_stripe_scripts');

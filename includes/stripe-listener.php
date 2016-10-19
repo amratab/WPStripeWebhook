@@ -1,6 +1,6 @@
 <?php
     
-    function pippin_stripe_event_listener() {
+    function ab_stripe_event_listener() {
         
         if(isset($_GET['webhook-listener']) && $_GET['webhook-listener'] == 'stripe') {
             global $stripe_options;
@@ -26,6 +26,8 @@
                 try {
                     $event_id = $event_json->id;
                     if(isset($stripe_options['test_mode']) && $stripe_options['test_mode']) {
+                        // This is an event id which you can dig from your stripe test account
+                        // Replace it with id of some event present in your stripe test account
                         $event_id = "evt_195XrgKoREGz8XvFbVmV38Dq";
                     }
                     
@@ -48,17 +50,16 @@
                             }
                         }
                         $email = $stripe_customer->email;
-                        $subject = __('Payment Failure at The Board Club', 'pippin_stripe');
-                        $headers = array('Content-Type: text/html; charset=UTF-8', 'From: The Board Club <peter@newportboardclub.com>', 'Bcc: peter@newportboardclub.com');
+                        $subject = __('Payment Failure at Your website', 'ab_stripe');
+                        $headers = array('Content-Type: text/html; charset=UTF-8', 'From: Your title <your_email@example.com>', 'Bcc: bcc@example.com');
                         $message = "<html>";
                         $message = "<div>Hi " . $name . ",</div><br>";
                         $message .= "<div>Don't worry, it's easy to fix.  We'll try your payment again in 3 days but you will need to update your card information in your account by following these steps: </div>";
-                        $message .= "<ol><li>Go to: <a href=\"http://www.newportboardclub.com\">www.newportboardclub.com</a> and login to your account</li>";
-                        $message .= "<li>Click \"View Your Account\"</li>";
-                        $message .= "<li>On the left-hand side, click \"Update Billing Information\"</li></ol>";
-                        $message .= "<div>If you have any questions, please contact Peter at <a href=\"tel:%28949%29%20375-2461\" value=\"+19493752461\" target=\"_blank\">(949) 375-2461</a>.</div><br>";
+                        $message .= "<ol><li>Go to: <a href=\"http://mydomain.com\">mydomain.com</a> and login to your account</li>";
+                        $message .= "<li>click \"Update Billing Information\"</li></ol>";
+                        $message .= "<div>If you have any questions, please contact me at <a href=\"tel:%28949%29%20375-2461\" value=\"+12345678\" target=\"_blank\">12345678</a>.</div><br>";
                         $message .= "<div><p>Thank you!</p>";
-                        $message .= "<p>The Board Club</p></div></html>";
+                        $message .= "<p>My cool website</p></div></html>";
                         wp_mail($email, $subject, $message, $headers);
                         
                     }
@@ -70,4 +71,4 @@
             }
         }
     }
-    add_action('init', 'pippin_stripe_event_listener');
+    add_action('init', 'ab_stripe_event_listener');
