@@ -42,6 +42,7 @@ After this, you should see a debug.log file in your wp-content folder and it wil
 ## Author
 
 Amrata Baghel, amrata.baghel@gmail.com
+
 [Portfolio](https://justlikeyou.co.in)
 
 
