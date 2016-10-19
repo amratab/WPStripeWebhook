@@ -10,6 +10,7 @@ Go to website admin page.
 Activate the WP Stripe webhook plugin for plugins section.
 After this Settings will start showing Stripe webhook settings section. Click on it.
 In the page fill the stripe keys and check test mode option if you want to test the plugin.
+In WPStripeWebhook/includes/stripe_listener.php, make changes for your event type and email or whatever you want to do in response to an event. It currently sends out an email.
 
 ## Important notes and suggestions
 
