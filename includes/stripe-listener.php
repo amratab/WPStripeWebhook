@@ -55,9 +55,9 @@
                         $message = "<html>";
                         $message = "<div>Hi " . $name . ",</div><br>";
                         $message .= "<div>Don't worry, it's easy to fix.  We'll try your payment again in 3 days but you will need to update your card information in your account by following these steps: </div>";
-                        $message .= "<ol><li>Go to: <a href=\"https://justlikeyou.co.in\">My website</a></li>";
+                        $message .= "<ol><li>Go to: <a href=\"https://mywebsite.com\">My website</a></li>";
                         $message .= "<li>click \"Update Billing Information\"</li></ol>";
-                        $message .= "<div>If you have any questions, please contact me at amrata.baghel@gmail.com.</div><br>";
+                        $message .= "<div>If you have any questions, please contact me at your_email@example.com.</div><br>";
                         $message .= "<div><p>Thank you!</p>";
                         $message .= "<p>My cool website</p></div></html>";
                         wp_mail($email, $subject, $message, $headers);
