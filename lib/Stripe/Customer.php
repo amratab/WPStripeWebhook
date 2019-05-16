@@ -74,10 +74,10 @@ class Stripe_Customer extends Stripe_ApiResource
     return $charges;
   }
 
-  public function updateSubscription($params=null)
+  public function updateSubscription($subscription, $params=null)
   {
     $requestor = new Stripe_ApiRequestor($this->_apiKey);
-    $url = $this->instanceUrl() . '/subscription';
+    $url = $this->instanceUrl() . '/subscriptions/' . $subscription;
     list($response, $apiKey) = $requestor->request('post', $url, $params);
     $this->refreshFrom(array('subscription' => $response), $apiKey, true);
     return $this->subscription;
